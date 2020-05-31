@@ -27,6 +27,17 @@ def test_sort_list_str_key():
         reveal_type(expected)
 
 
+def test_sort_list_str_bad_key_not_callable():
+    # type: () -> None
+    given = [u'mango', u'pear', u'apple', u'kiwi', u'banana']
+    bad_key = 1
+    if TYPE_CHECKING:
+        reveal_type(bad_key)
+    with pytest.raises(TypeError) as exc:
+        my.sort(given, key=bad_key)
+    assert "'int' object is not callable" in str(exc)
+
+
 def test_sort_list_str_bad_key_arity():
     # type: () -> None
     given = [u'mango', u'pear', u'apple', u'kiwi', u'banana']
@@ -40,15 +51,6 @@ def test_sort_list_str_bad_key_arity():
     assert 'bad_key()' in str(exc)
     assert 'argument' in str(exc)
 
-def test_sort_list_str_bad_key_not_callable():
-    # type: () -> None
-    given = [u'mango', u'pear', u'apple', u'kiwi', u'banana']
-    bad_key = 1
-    if TYPE_CHECKING:
-        reveal_type(bad_key)
-    with pytest.raises(TypeError) as exc:
-        my.sort(given, key=bad_key)
-    assert "'int' object is not callable" in str(exc)
 
 py3_only = pytest.mark.skipif(sys.version_info < (3,),
                              reason='requires Python 3')
@@ -87,7 +89,7 @@ def test_sort_list_str_cmp_py2():
         reveal_type(expected)
 
 @py2_only
-def test_sort_list_str_bad_cmp_arity():
+def test_sort_list_str_bad_cmp_arity_py2():
     # type: () -> None
     given = [u'mango', u'pear', u'apple', u'kiwi', u'banana']
     def bad_cmp():
