@@ -1,0 +1,5 @@
+#!/bin/bash
+
+clear
+mypy --py2 $1
+pytest -v $1
