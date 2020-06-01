@@ -1,5 +1,6 @@
 # protocol_less_than
-A PEP 544 protocol for parameterized typing of functions that sort
+A PEP 544 protocol to support type hints for functions
+that sort or depend on items implementing `__lt__`.
 
 ```python
 class _SupportsLestThan(Protocol):
