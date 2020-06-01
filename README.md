@@ -13,7 +13,7 @@ _LT = TypeVar('_LT', bound=_SupportsLestThan)
 ```
 
 
-## sorted
+## Example: the sorted built-in
 
 ### Python 3
 
