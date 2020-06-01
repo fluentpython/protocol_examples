@@ -1,6 +1,14 @@
 # protocol_less_than
 A PEP 544 protocol for parameterized typing of functions that sort
 
+```python
+class _SupportsLestThan(Protocol):
+    def __lt__(self, other: Any) -> bool: ...
+
+_T = TypeVar('_T')
+_LT = TypeVar('_LT', bound=_SupportsLestThan)
+```
+
 
 ## sorted
 
@@ -21,10 +29,10 @@ def sorted(__it: Iterable[_T], *,
 | hint | prevents bug |
 | ---- | ----- |
 | `it: Iterable[_T]` | `it` is not iterable |
-| `it: Iterable[_LT]` | `_LT` doesn't implement `_SupportsLessThan` |
+| `it: Iterable[_LT]` | `_LT` doesn't implement `__lt__` |
 | `key: Optional[Callable[[_T], _LT]]` | `key` is not callable or `None`|
 |                                      | `key` is callable with arity ≠ 1 |
-|                                      | `key` returns type that doesn't implement `_SupportsLessThan` |
+|                                      | `key` returns type that doesn't implement `__lt__` |
 
 
 ### Python 2
