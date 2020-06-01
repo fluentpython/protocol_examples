@@ -1,4 +1,6 @@
-# protocol_less_than
+# Protocol: Supports Less Tham
+
+
 A PEP 544 protocol to support type hints for functions
 that sort or depend on items implementing `__lt__`.
 
