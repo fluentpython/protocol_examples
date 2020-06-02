@@ -17,6 +17,14 @@ def test_max_args(args, expected):
     result = my.max(*args)
     assert result == expected
 
+@pytest.mark.parametrize('args, expected', [
+    ([1, 3], 1),
+    ([3, 1], 1),
+    ([30, 10, 20], 10),
+])
+def test_min_args(args, expected):
+    result = my.min(*args)
+    assert result == expected
 
 @pytest.mark.parametrize('iterable, expected', [
     ([7], 7),
@@ -66,4 +74,23 @@ def test_max_iterable_with_key(
     expected: str
 ) -> None:
     result = my.max(fruits, key=key)
+    assert result == expected
+
+
+'banana kiwi mango apple'
+
+@pytest.mark.parametrize('key, expected', [
+    (None, 'apple'),
+    (lambda x: x, 'apple'),
+    (len, 'kiwi'),
+    (lambda s: -len(s), 'banana'),
+    (lambda s: -ord(s[0]), 'mango'),
+    (lambda s: ord(s[-1]), 'banana'),
+])
+def test_min_iterable_with_key(
+    fruits: List[str],
+    key: Callable[[str], str],
+    expected: str
+) -> None:
+    result = my.min(fruits, key=key)
     assert result == expected
