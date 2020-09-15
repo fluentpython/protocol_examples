@@ -10,7 +10,7 @@ class _SupportsLessThan(Protocol):
 
 _T = TypeVar('_T')
 _T1 = TypeVar('_T1')
-_LT = TypeVar('_LT', bound=_SupportsLestThan)
+_LT = TypeVar('_LT', bound=_SupportsLessThan)
 ```
 
 
