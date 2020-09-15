@@ -5,7 +5,7 @@ A PEP 544 protocol to support type hints for functions that depend on items
 implementing `__lt__`—any function that relies on sorting, for example.
 
 ```python
-class _SupportsLestThan(Protocol):
+class _SupportsLessThan(Protocol):
     def __lt__(self, other: Any) -> bool: ...
 
 _T = TypeVar('_T')
