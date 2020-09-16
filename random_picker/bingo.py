@@ -25,11 +25,12 @@ When exhausted, ``pick`` raises ``LookupError``:
 
 """
 
+from typing import List
 import random
 
 class Cage():
-    def __init__(self):
-        self._balls: list[int] = list(range(1, 76))
+    def __init__(self) -> None:
+        self._balls: List[int] = list(range(1, 76))
         random.shuffle(self._balls)
 
     def pick(self) -> int:
