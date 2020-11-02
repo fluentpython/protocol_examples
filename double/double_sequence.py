@@ -1,6 +1,7 @@
 from collections import abc
-from typing import Any
+from typing import TypeVar
 
-def double(x: abc.Sequence) -> Any:
+T = TypeVar('T')
+
+def double(x: abc.Sequence[T]) -> Sequence[T]:
     return x * 2
-
