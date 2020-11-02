@@ -149,11 +149,9 @@ class Vector:
     @overload
     def __getitem__(self: T, key: slice) -> T:
         ...
-
     @overload
     def __getitem__(self, key: SupportsIndex) -> float:
         ...
-
     def __getitem__(self, key):
         if isinstance(key, slice):  # <1>
             cls = type(self)  # <2>
