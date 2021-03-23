@@ -26,13 +26,9 @@ LessT = TypeVar('LessT', bound=SupportsLessThan)
 @overload
 def max(first: LessT, *rest: LessT, key=None) -> LessT:
     ...
-
-
 @overload
 def max(first: T, *rest: T, key=Callable[[T], LessT]) -> T:
     ...
-
-
 def max(first, *rest, key=None):
     candidate = first
     if key is None:
