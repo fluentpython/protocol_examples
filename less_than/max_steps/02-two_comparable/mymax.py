@@ -14,8 +14,6 @@ A: Objects that implement ``<`` are comparable.
 """
 
 
-from decimal import Decimal
-from fractions import Fraction
 from typing import TypeVar, Protocol, Any
 
 

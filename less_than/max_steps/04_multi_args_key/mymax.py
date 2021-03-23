@@ -9,8 +9,6 @@ modulus a.k.a. absulute values:
 
 """
 
-from decimal import Decimal
-from fractions import Fraction
 from typing import TypeVar, Protocol, Any, Callable, overload
 
 
@@ -24,10 +22,10 @@ LessT = TypeVar('LessT', bound=SupportsLessThan)
 
 
 @overload
-def max(first: LessT, *rest: LessT, key=None) -> LessT:
+def max(first: LessT, *rest: LessT, key: None = ...) -> LessT:
     ...
 @overload
-def max(first: T, *rest: T, key=Callable[[T], LessT]) -> T:
+def max(first: T, *rest: T, key: Callable[[T], LessT]) -> T:
     ...
 def max(first, *rest, key=None):
     candidate = first
