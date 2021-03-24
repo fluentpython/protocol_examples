@@ -21,6 +21,7 @@ T = TypeVar('T')
 LessT = TypeVar('LessT', bound=SupportsLessThan)
 KeyFun = Callable[[T], LessT]
 
+
 @overload
 def max(first: LessT, *rest: LessT, key: None = ...) -> LessT:
     ...
