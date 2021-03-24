@@ -3,8 +3,7 @@ from fractions import Fraction
 from typing import TypeVar, Iterable, Optional, Callable
 
 import mymax
-from mymax import LessT, KeyFunc
-
+from mymax import LessT
 import pytest
 
 
@@ -77,6 +76,13 @@ def test_multi_params(
     assert result == expected
 
 
+def test_two_complex():
+    a = 5 + 4j
+    b = 3 + 5j
+    result = mymax.max(a, b, key=abs)
+    assert result == a
+
+
 @pytest.mark.parametrize(
     'first, rest, key, expected',
     [
@@ -89,15 +95,12 @@ def test_multi_params(
 def test_multi_with_key_params(
     first: LessT,
     rest: Iterable[LessT],
-    key: Optional[KeyFunc],
+    key: Optional[Callable[[T], LessT]],
     expected: LessT,
 ) -> None:
     result = mymax.max(first, *rest, key=key)
     assert result == expected
 
-
-def test_two_complex():
-    a = 5 + 4j
-    b = 3 + 5j
-    result = mymax.max(a, b, key=abs)
-    assert result == a
+# mysterious mypy error:
+# mymax_test.py:101: error: Argument "key" to "max" has incompatible
+# type "Optional[Callable[[T], LessT]]"; expected "None"
