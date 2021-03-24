@@ -19,13 +19,13 @@ class SupportsLessThan(Protocol):
 
 T = TypeVar('T')
 LessT = TypeVar('LessT', bound=SupportsLessThan)
-
+KeyFunc = Callable[[T], LessT]
 
 @overload
 def max(first: LessT, *rest: LessT, key: None = ...) -> LessT:
     ...
 @overload
-def max(first: T, *rest: T, key: Callable[[T], LessT]) -> T:
+def max(first: T, *rest: T, key: KeyFunc) -> T:
     ...
 def max(first, *rest, key=None):
     candidate = first
