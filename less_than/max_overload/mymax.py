@@ -1,15 +1,15 @@
 # tag::MYMAX_TYPES[]
 from typing import Protocol, Any, TypeVar, overload, Callable, Iterable, Union
 
+MISSING = object()
+EMPTY_MSG = 'max() arg is an empty sequence'
+
 class _SupportsLessThan(Protocol):
     def __lt__(self, other: Any) -> bool: ...
 
 _T = TypeVar('_T')
 _LT = TypeVar('_LT', bound=_SupportsLessThan)
 _DT = TypeVar('_DT')
-
-MISSING = object()
-EMPTY_MSG = 'max() arg is an empty sequence'
 
 @overload
 def max(__arg1: _LT, __arg2: _LT, *_args: _LT, key: None = ...) -> _LT:
@@ -29,8 +29,6 @@ def max(__iterable: Iterable[_LT], *, key: None = ..., default: _DT) -> Union[_L
 @overload
 def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT], default: _DT) -> Union[_T, _DT]:
     ...
-# end::MYMAX_TYPES[]
-# tag::MYMAX[]
 def max(first, *args, key=None, default=MISSING):
     if args:
         series = args
@@ -55,7 +53,6 @@ def max(first, *args, key=None, default=MISSING):
                 candidate = current
                 candidate_key = current_key
     return candidate
-# end::MYMAX[]
 
 @overload
 def min(__arg1: _LT, __arg2: _LT, *_args: _LT, key: None = ...) -> _LT:
