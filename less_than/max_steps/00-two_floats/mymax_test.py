@@ -10,6 +10,6 @@ import pytest
         (4, 4, 4),
     ],
 )
-def test_two_ints(a: int, b: int, expected: int) -> None:
-    result = mymax.max(a, b)
+def test_two_ints(a: float, b: float, expected: float) -> None:
+    result: float = mymax.max(a, b)
     assert result == expected
