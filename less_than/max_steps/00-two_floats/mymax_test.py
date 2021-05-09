@@ -1,5 +1,6 @@
-import mymax
 import pytest
+
+import mymax
 
 
 @pytest.mark.parametrize(
