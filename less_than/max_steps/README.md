@@ -1,6 +1,6 @@
 # Type hinting `builtin.max()`
 
-```
+```python
 >>> max(3.1416, 2.1783)
 3.1416
 >>> max(5, 8)
