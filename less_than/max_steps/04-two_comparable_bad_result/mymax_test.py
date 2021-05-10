@@ -3,7 +3,7 @@ from fractions import Fraction
 from typing import TypeVar
 
 import mymax
-from mymax import LessT
+from mymax import SupportsLessThan
 
 import pytest
 
@@ -56,7 +56,7 @@ def test_two_comparables() -> None:
         ({1, 2, 3}, {1, 3}, {1, 2, 3}),
     ],
 )
-def test_two_comparables_params(a: LessT, b: LessT, expected: LessT) -> None:
+def test_two_comparables_params(a: SupportsLessThan, b: SupportsLessThan, expected: SupportsLessThan) -> None:
     result = mymax.max(a, b)
     assert result == expected
 
