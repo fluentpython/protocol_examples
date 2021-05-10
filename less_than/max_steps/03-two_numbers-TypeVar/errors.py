@@ -25,6 +25,32 @@ def demo_args_fraction() -> None:
         reveal_type(result)
 
 
+def demo_args_fraction_float() -> None:
+    a, b = Fraction(5, 8), .5
+    expected = a
+    result = my.max(a, b)
+    assert result == expected
+    print((a, b), '->', result)
+    print(result.numerator, result.denominator, sep='/')
+    if TYPE_CHECKING:
+        reveal_type(a)
+        reveal_type(b)
+        reveal_type(result)
+
+
+def demo_args_float_fraction() -> None:
+    a, b = .9, Fraction(5, 8)
+    expected = a
+    result = my.max(a, b)
+    assert result == expected
+    print((a, b), '->', result)
+    print(result.numerator, result.denominator, sep='/')
+    if TYPE_CHECKING:
+        reveal_type(a)
+        reveal_type(b)
+        reveal_type(result)
+
+
 ###################################### intentional type errors
 
 from fractions import Fraction
