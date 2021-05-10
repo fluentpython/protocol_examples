@@ -1,10 +1,10 @@
 from decimal import Decimal
 from fractions import Fraction
-from numbers import Number
 
 import pytest
 
 import mymax as my
+from mymax import Numeric
 
 
 @pytest.mark.parametrize(
@@ -34,6 +34,6 @@ def test_two_numbers() -> None:
         (Decimal('-1.3'), Decimal('-1.2'), Decimal('-1.2')),
     ],
 )
-def test_two_numbers_params(a: my.Number, b: my.Number, expected: my.Number) -> None:
+def test_two_numbers_params(a: Numeric, b: Numeric, expected: Numeric) -> None:
     result = my.max(a, b)
     assert result == expected
