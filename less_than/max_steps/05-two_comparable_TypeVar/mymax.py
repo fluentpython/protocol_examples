@@ -9,7 +9,7 @@ LessT = TypeVar('LessT', bound=SupportsLessThan)
 
 
 def max(a: LessT, b: LessT) -> LessT:
-    if b < a:  # refactored to use <
+    if b < a:
         return a
     return b
 
