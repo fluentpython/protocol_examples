@@ -1,5 +1,5 @@
-# tag::MYMAX_TYPES[]
-from typing import Protocol, Any, TypeVar, overload, Callable, Iterable, Union
+from collections.abc import Callable, Iterable
+from typing import Protocol, Any, TypeVar, overload
 
 MISSING = object()
 EMPTY_MSG = 'max() arg is an empty sequence'
@@ -24,10 +24,10 @@ def max(__iterable: Iterable[_LT], *, key: None = ...) -> _LT:
 def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT]) -> _T:
     ...
 @overload
-def max(__iterable: Iterable[_LT], *, key: None = ..., default: _DT) -> Union[_LT, _DT]:
+def max(__iterable: Iterable[_LT], *, key: None = ..., default: _DT) -> _LT | _DT:
     ...
 @overload
-def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT], default: _DT) -> Union[_T, _DT]:
+def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT], default: _DT) -> _T, _DT:
     ...
 def max(first, *args, key=None, default=MISSING):
     if args:
