@@ -1,33 +1,33 @@
 from collections.abc import Callable, Iterable
-from typing import Protocol, Any, TypeVar, overload
+from typing import Protocol, Any, TypeVar, overload, Union
 
 MISSING = object()
 EMPTY_MSG = 'max() arg is an empty sequence'
 
-class _SupportsLessThan(Protocol):
+class SupportsLessThan(Protocol):
     def __lt__(self, other: Any) -> bool: ...
 
-_T = TypeVar('_T')
-_LT = TypeVar('_LT', bound=_SupportsLessThan)
-_DT = TypeVar('_DT')
+T = TypeVar('T')
+LT = TypeVar('LT', bound=SupportsLessThan)
+DT = TypeVar('DT')
 
 @overload
-def max(__arg1: _LT, __arg2: _LT, *_args: _LT, key: None = ...) -> _LT:
+def max(arg1: LT, arg2: LT, *_args: LT, key: None = ...) -> LT:
     ...
 @overload
-def max(__arg1: _T, __arg2: _T, *_args: _T, key: Callable[[_T], _LT]) -> _T:
+def max(arg1: T, arg2: T, *_args: T, key: Callable[[T], LT]) -> T:
     ...
 @overload
-def max(__iterable: Iterable[_LT], *, key: None = ...) -> _LT:
+def max(iterable: Iterable[LT], *, key: None = ...) -> LT:
     ...
 @overload
-def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT]) -> _T:
+def max(iterable: Iterable[T], *, key: Callable[[T], LT]) -> T:
     ...
 @overload
-def max(__iterable: Iterable[_LT], *, key: None = ..., default: _DT) -> _LT | _DT:
+def max(iterable: Iterable[LT], *, key: None = ..., default: DT) -> Union[LT, DT]:
     ...
 @overload
-def max(__iterable: Iterable[_T], *, key: Callable[[_T], _LT], default: _DT) -> _T, _DT:
+def max(iterable: Iterable[T], *, key: Callable[[T], LT], default: DT) -> Union[T, DT]:
     ...
 def max(first, *args, key=None, default=MISSING):
     if args:
@@ -55,22 +55,22 @@ def max(first, *args, key=None, default=MISSING):
     return candidate
 
 @overload
-def min(__arg1: _LT, __arg2: _LT, *_args: _LT, key: None = ...) -> _LT:
+def min(arg1: LT, arg2: LT, *_args: LT, key: None = ...) -> LT:
     ...
 @overload
-def min(__arg1: _T, __arg2: _T, *_args: _T, key: Callable[[_T], _LT]) -> _T:
+def min(arg1: T, arg2: T, *_args: T, key: Callable[[T], LT]) -> T:
     ...
 @overload
-def min(__iterable: Iterable[_LT], *, key: None = ...) -> _LT:
+def min(iterable: Iterable[LT], *, key: None = ...) -> LT:
     ...
 @overload
-def min(__iterable: Iterable[_T], *, key: Callable[[_T], _LT]) -> _T:
+def min(iterable: Iterable[T], *, key: Callable[[T], LT]) -> T:
     ...
 @overload
-def min(__iterable: Iterable[_LT], *, key: None = ..., default: _DT) -> Union[_LT, _DT]:
+def min(iterable: Iterable[LT], *, key: None = ..., default: DT) -> Union[LT, DT]:
     ...
 @overload
-def min(__iterable: Iterable[_T], *, key: Callable[[_T], _LT], default: _DT) -> Union[_T, _DT]:
+def min(iterable: Iterable[T], *, key: Callable[[T], LT], default: DT) -> Union[T, DT]:
     ...
 def min(first, *args, key=None, default=MISSING):
     if args:
