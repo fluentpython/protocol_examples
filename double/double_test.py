@@ -1,6 +1,7 @@
 from typing import TYPE_CHECKING
 import pytest
-from double_protocol_ok import double
+from double_protocol_ok_py312 import double
+
 
 def test_double_int() -> None:
     given = 2
