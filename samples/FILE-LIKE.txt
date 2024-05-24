@@ -1,0 +1,274 @@
+Doc/glossary.rst:      etc.).  File objects are also called :dfn:`file-like objects` or
+Doc/glossary.rst:   file-like object
+Doc/howto/functional.rst:line of a file like this::
+Doc/howto/logging-cookbook.rst:can do this using a class which wraps a logger with a file-like API.
+Doc/howto/logging-cookbook.rst:            # doesn't actually do anything, but might be expected of a file-like
+Doc/howto/logging-cookbook.rst:            # doesn't actually do anything, but might be expected of a file-like
+Doc/howto/logging-cookbook.rst:Sometimes, you need to interface to a third-party API which expects a file-like
+Doc/howto/logging.rst:#. :class:`StreamHandler` instances send messages to streams (file-like
+Doc/howto/sockets.rst:and ``recv``, or you can transform your client socket into a file-like beast and
+Doc/howto/unicode.rst:done for you: the built-in :func:`open` function can return a file-like object
+Doc/howto/urllib2.rst:a file-like object, which means you can for example call ``.read()`` on the
+Doc/library/asyncio-eventloop.rst:     * a file-like object
+Doc/library/asyncio-eventloop.rst:     * a file-like object
+Doc/library/asyncio-eventloop.rst:     * a file-like object
+Doc/library/asyncio-eventloop.rst:   If a file-like object passed as *stdin*, *stdout* or *stderr* represents a
+Doc/library/asyncio-eventloop.rst:   *pipe* is a :term:`file-like object <file object>`.
+Doc/library/asyncio-eventloop.rst:   *pipe* is :term:`file-like object <file object>`.
+Doc/library/chunk.rst:   file-like object.  An instance of this class is specifically allowed.  The
+Doc/library/codecs.rst:   Creates a :class:`StreamReaderWriter` instance. *stream* must be a file-like
+Doc/library/codecs.rst:   The *stream* argument must be a file-like object.
+Doc/library/codecs.rst:   The *stream* argument must be a file-like object open for reading
+Doc/library/codecs.rst:   The *stream* argument must be a file-like object open for writing
+Doc/library/contextlib.rst:   another file or file-like object.
+Doc/library/contextlib.rst:   :data:`sys.stderr` to another file or file-like object.
+Doc/library/csv.rst:   A csvfile is most commonly a file-like object or list.
+Doc/library/csv.rst:   strings on the given file-like object.  *csvfile* can be any object with a
+Doc/library/difflib.rst:      file-like object.
+Doc/library/difflib.rst:      :meth:`~io.IOBase.readlines` method of file-like objects.  The delta
+Doc/library/difflib.rst:obtained from the :meth:`~io.IOBase.readlines` method of file-like objects):
+Doc/library/email.generator.rst:      :class:`Generator`'s constructor.  This provides just enough file-like
+Doc/library/email.generator.rst:   method, to the :term:`file-like object` *outfp*.  *outfp* must support a
+Doc/library/email.generator.rst:   to the :meth:`write` method, to the :term:`file-like object` *outfp*.
+Doc/library/email.iterators.rst:   Optional *fp* is a file-like object to print the output to.  It must be
+Doc/library/email.parser.rst:      instead of a file-like object.  Calling this method on a string is
+Doc/library/email.parser.rst:      :meth:`~io.TextIOBase.read` methods on file-like objects.
+Doc/library/email.parser.rst:      object` instead of a file-like object.  Calling this method on a
+Doc/library/email.parser.rst:      Read all the data from the binary file-like object *fp*, parse the
+Doc/library/email.parser.rst:      Read all the data from the text-mode file-like object *fp*, parse the
+Doc/library/fileinput.rst:   *filename* and *mode*, and returns an accordingly opened file-like object. You
+Doc/library/fileinput.rst:returns an accordingly opened file-like object. If *encoding* and/or *errors*
+Doc/library/getpass.rst:   prompt is written to the file-like object *stream* using the replace error
+Doc/library/hashlib.rst:a file or file-like object.
+Doc/library/hashlib.rst:   *fileobj* must be a file-like object opened for reading in binary mode.
+Doc/library/http.client.rst:   Buffer size in bytes for sending a file-like message body.
+Doc/library/http.client.rst:   sending a file-like message body.
+Doc/library/imghdr.rst:   arguments: the byte-stream and an open file-like object. When :func:`what` is
+Doc/library/imghdr.rst:   called with a byte-stream, the file-like object will be ``None``.
+Doc/library/importlib.resources.abc.rst:        Returns an opened, :term:`file-like object` for binary reading
+Doc/library/importlib.resources.rst:"Resources" are file-like resources associated with a module or package in
+Doc/library/importlib.rst:        Loaders that have a file-like storage back-end
+Doc/library/importlib.rst:        Returns an opened, :term:`file-like object` for binary reading
+Doc/library/io.rst:and *file-like object*.
+Doc/library/json.rst:   :term:`file-like object`) using this :ref:`conversion table
+Doc/library/logging.config.rst:                 method, it is assumed to be a file-like object and read using
+Doc/library/logging.config.rst:   :param fname: A filename, or a file-like object, or an instance derived
+Doc/library/logging.handlers.rst:file-like object (or, more precisely, any object which supports :meth:`write`
+Doc/library/mailbox.rst:      :class:`email.message.Message` instance, a string, or a file-like object
+Doc/library/mailbox.rst:   *factory* is a callable object that accepts a file-like message representation
+Doc/library/mailbox.rst:   *factory* is a callable object that accepts a file-like message representation
+Doc/library/mailbox.rst:      file. As a result, the file-like object is truly independent of the
+Doc/library/mailbox.rst:      file-like object behaves as if open in binary mode.  This file should be
+Doc/library/mailbox.rst:      file-like object (which should be open in binary mode). If *message* is
+Doc/library/mailbox.rst:         incorrectly returned in text mode.  Also, the :term:`file-like object`
+Doc/library/mailbox.rst:   is a callable object that accepts a file-like message representation (which
+Doc/library/mailbox.rst:   is a callable object that accepts a file-like message representation (which
+Doc/library/mailbox.rst:   is a callable object that accepts a file-like message representation (which
+Doc/library/mailbox.rst:   offer string and file-like representations, and a custom message factory may
+Doc/library/mailbox.rst:      Return a :term:`file-like <file-like object>` representation of the
+Doc/library/mailbox.rst:      string, or a file-like object (which should be open in binary mode). If
+Doc/library/mailbox.rst:         :term:`file-like <file-like object>` representations are not
+Doc/library/mailbox.rst:      with the body of the message. To generate a file-like representation, the
+Doc/library/multiprocessing.rst:Beware of replacing :data:`sys.stdin` with a "file like object"
+Doc/library/multiprocessing.rst:    If you write a file-like object and implement your own caching, you can
+Doc/library/multiprocessing.rst:    :meth:`~io.IOBase.close()` on this file-like object, it could result in the same
+Doc/library/multiprocessing.rst:    to applications which replace :func:`sys.stdin` with a "file-like object"
+Doc/library/os.rst:   method on :term:`file-like objects <file object>`,
+Doc/library/os.rst:   method on :term:`file-like objects <file object>`,
+Doc/library/ossaudiodev.rst:   supports many file-like methods, such as :meth:`read`, :meth:`write`, and
+Doc/library/ossaudiodev.rst:The mixer object provides two file-like methods:
+Doc/library/pickletools.rst:   Outputs a symbolic disassembly of the pickle to the file-like
+Doc/library/pickletools.rst:   *pickle* can be a string or a file-like object.
+Doc/library/pickletools.rst:   string or a file-like object.  *memo* can be a Python dictionary
+Doc/library/pipes.rst:   Return a file-like object, open to *file*, but read from or written to by the
+Doc/library/pprint.rst:   *stream* (default ``sys.stdout``) is a :term:`file-like object` to
+Doc/library/select.rst:   to other kind of file-like objects such as sockets.
+Doc/library/shlex.rst:   to return a tuple consisting of a filename and an open file-like object.
+Doc/library/shutil.rst:   Copy the contents of the file-like object *fsrc* to the file-like object *fdst*.
+Doc/library/sndhdr.rst:   arguments: the byte-stream and an open file-like object. When :func:`what` is
+Doc/library/sndhdr.rst:   called with a byte-stream, the file-like object will be ``None``.
+Doc/library/socket.rst:      On Windows, the file-like object created by :meth:`makefile` cannot be
+Doc/library/socketserver.rst:An alternative request handler class that makes use of streams (file-like
+Doc/library/socketserver.rst:           # Likewise, self.wfile is a file-like object used to write back
+Doc/library/socketserver.rst:           # self.rfile is a file-like object created by the handler;
+Doc/library/sqlite3.rst:   A :class:`Blob` instance is a :term:`file-like object`
+Doc/library/sunau.rst:   seekable file-like object. *mode* can be any of
+Doc/library/sysconfig.rst:   *fp* is a file-like object pointing to the :file:`config.h`\-like file.
+Doc/library/sys.rst:      may be replaced with file-like objects like :class:`io.StringIO` which
+Doc/library/tarfile.rst:   module can read. *name* may be a :class:`str`, file, or file-like object.
+Doc/library/tarfile.rst:      Support for file and file-like objects.
+Doc/library/tempfile.rst:   attribute is the underlying true file object. This file-like object
+Doc/library/tempfile.rst:   file-like object can be used in a :keyword:`with` statement, just like
+Doc/library/tempfile.rst:   of the returned file-like object. On Unix, unlike with the
+Doc/library/tempfile.rst:   only, or else when the :term:`file-like object` is finalized. Deletion is not
+Doc/library/tempfile.rst:   platforms, it is a file-like object whose :attr:`!file` attribute is the
+Doc/library/tempfile.rst:   Return a :term:`file-like object` that can be used as a temporary storage area.
+Doc/library/tempfile.rst:   The returned object is a file-like object whose :attr:`!_file` attribute
+Doc/library/tempfile.rst:   The returned object is always a :term:`file-like object` whose :attr:`!file`
+Doc/library/traceback.rst:   :term:`file <file object>` or :term:`file-like object` to
+Doc/library/unittest.mock-examples.rst:object it returns is 'file-like', so we'll ensure that our response object
+Doc/library/urllib.error.rst:      A file-like object where the HTTP error body can be read from.
+Doc/library/urllib.error.rst:   :exc:`HTTPError` can also function as a non-exceptional file-like return
+Doc/library/urllib.request.rst:   :class:`OpenerDirector`.  It should return a file-like object as described in
+Doc/library/urllib.request.rst:minimal file-like interface, including ``read()`` and ``readline()``.
+Doc/library/urllib.request.rst:   *req* will be a :class:`Request` object, *fp* will be a file-like object with
+Doc/library/urllib.request.rst:   types include bytes, file-like objects, and iterables of bytes-like objects.
+Doc/library/uu.rst:argument is expected, the methods accept a file-like object.  For backwards
+Doc/library/wave.rst:   file-like object is passed as *file*, ``file.mode`` is used as the default
+Doc/library/wave.rst:   file-like object.  *mode* can be:
+Doc/library/wave.rst:   If you pass in a file-like object, the wave object will not close it when its
+Doc/library/wsgiref.rst:      filelike = StringIO("This is an example file-like object"*10)
+Doc/library/wsgiref.rst:   protocol used to convert a file-like object to an :term:`iterator`.
+Doc/library/wsgiref.rst:      # We're using a StringIO-buffer for as the file-like object
+Doc/library/xml.dom.minidom.rst:   either a file name, or a file-like object. *parser*, if given, must be a SAX2
+Doc/library/xml.dom.pulldom.rst:   either a file name, or a file-like object. *parser*, if given, must be an
+Doc/library/xml.etree.elementtree.rst:   file-like object (*from_file*) as input, converts it to the canonical
+Doc/library/xml.sax.utils.rst:   reading.  The input source can be given as a string, a file-like object, or
+Doc/library/xml.sax.utils.rst:   should be a file-like object which will default to *sys.stdout*. *encoding* is
+Doc/library/zipapp.rst:   The *archive* argument can be a filename or a file-like object open
+Doc/library/zipfile.rst:   Access a member of the archive as a binary file-like object.  *name*
+Doc/library/zipfile.rst:   file-like object or a :term:`path-like object`.
+Doc/library/zipfile.rst:   otherwise returns ``False``.  *filename* may be a file or file-like object too.
+Doc/library/zipfile.rst:      Support for file and file-like objects.
+Doc/library/zipfile.rst:   With *mode* ``'r'`` the file-like object
+Doc/library/zoneinfo.rst:    Constructs a ``ZoneInfo`` object from a file-like object returning bytes
+Doc/whatsnew/2.0.rst::meth:`write` method of the file-like object, which lacks the convenience and
+Doc/whatsnew/2.0.rst:The ``print`` statement can now have its output directed to a file-like
+Doc/whatsnew/2.2.rst:Consider some file-like object that wants to be looped over; the *index*
+Doc/whatsnew/2.5.rst:Like :func:`parse`, it can take either a string or a file-like object::
+Doc/whatsnew/2.5.rst:string (assumed to contain a filename) or a file-like object and returns an
+Doc/whatsnew/2.6.rst:file-like objects don't necessarily support all of them.  Objects that
+Doc/whatsnew/2.6.rst:    # read/writePlist accepts file-like objects as well as paths.
+Doc/whatsnew/2.7.rst:  nothing when a negative length is requested, as other file-like
+Doc/whatsnew/3.11.rst:  of files or file-like objects.
+Doc/whatsnew/3.11.rst:  This lets them work correctly with APIs that expect file-like objects,
+Doc/whatsnew/3.2.rst:Other file-like objects such as :class:`mmap.mmap` and :func:`fileinput.input`
+Doc/whatsnew/3.3.rst:* :class:`bz2.BZ2File` can now read from and write to arbitrary file-like
+Doc/whatsnew/3.3.rst:The :meth:`~mmap.mmap.read` method is now more compatible with other file-like
+Doc/whatsnew/3.5.rst:descriptors in addition to file-like objects.
+Lib/asyncio/events.py:        pipe is a file-like object.
+Lib/asyncio/events.py:        Pipe is file-like object already switched to nonblocking.
+Lib/asyncio/events.py:        # The reason to accept file-like object instead of just file descriptor
+Lib/asyncio/events.py:        # The reason to accept file-like object instead of just file descriptor
+Lib/chunk.py:The __init__ method has one required argument, a file-like object
+Lib/chunk.py:The interface is file-like.  The implemented methods are:
+Lib/codecs.py:            stream must be a file-like object.
+Lib/codecs.py:            stream must be a file-like object open for reading.
+Lib/codecs.py:            stream must be a file-like object open for writing.
+Lib/configparser.py:        """Like read() but the argument must be a file-like object.
+Lib/difflib.py:        method of a file-like object.
+Lib/difflib.py:        of file-like objects.  The delta generated also consists of newline-
+Lib/difflib.py:    `readlines()` method of file-like objects):
+Lib/email/generator.py:        outfp is the output file-like object for writing the message to.  It
+Lib/ftplib.py:          fp: A file-like object with a readline() method.
+Lib/ftplib.py:          fp: A file-like object with a read(num_bytes) method.
+Lib/hashlib.py:            f"'{fileobj!r}' is not a file-like object in binary reading mode."
+Lib/hashlib.py:    *fileobj* must be a file-like object opened for reading in binary mode.
+Lib/hashlib.py:    """Hash the contents of a file-like object. Returns a digest object.
+Lib/http/client.py:            # file-like object.
+Lib/http/client.py:        file-like object that supports a .read() method, or an iterable object.
+Lib/http/client.py:                # Let file-like take precedence over byte-like.  This
+Lib/http/client.py:        """Test whether a file-like object is a text or a binary stream.
+Lib/importlib/resources/abc.py:        """Return an opened, file-like object for binary reading.
+Lib/importlib/resources/_legacy.py:    """Return a file-like object opened for binary reading of the resource."""
+Lib/importlib/resources/_legacy.py:    """Return a file-like object opened for text reading of the resource."""
+Lib/json/__init__.py:    """Deserialize ``fp`` (a ``.read()``-supporting file-like object containing
+Lib/json/__init__.py:    ``.write()``-supporting file-like object).
+Lib/mailbox.py:        """Return a file-like representation or raise a KeyError."""
+Lib/mailbox.py:        """Return a file-like representation or raise a KeyError."""
+Lib/mailbox.py:        """Return a file-like representation or raise a KeyError."""
+Lib/mailbox.py:        """Return a file-like representation or raise a KeyError."""
+Lib/mailbox.py:        """Return a file-like representation or raise a KeyError."""
+Lib/nntplib.py:        If `file` is a file-like object, it must be open in binary mode.
+Lib/pickle.py:        The file-like object must have two methods, a read() method
+Lib/pickle.py:        Thus file-like object can be a binary file object opened for
+Lib/pickletools.py:        # a function taking a file-like object, reading this kind of argument
+Lib/pickletools.py:    Optional arg 'out' is a file-like object to which the disassembly is
+Lib/pickletools.py:    'pickle' is a file-like object, or string, containing a (at least one)
+Lib/pickletools.py:    'pickle' is a file-like object, or string, containing the pickle.
+Lib/shutil.py:    """copy data from file-like object fsrc to file-like object fdst"""
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/subprocess.py:                    # Assuming file-like object
+Lib/tarfile.py:       'name' should be a string, file, or file-like object.
+Lib/tempfile.py:        Returns an object with a file-like interface.  The file has no
+Lib/tempfile.py:    Returns an object with a file-like interface; the name of the file
+Lib/test/pickletester.py:    A file-like object that doesn't support readinto().
+Lib/test/test_memoryio.py:"""Unit tests for memory-based file-like objects.
+Lib/test/test_sax.py:        # If the source is a binary file-like object, use it as a byte
+Lib/test/test_sax.py:        # If the source is a text file-like object, use it as a character
+Lib/test/test_ssl.py:        # Issue #5238: creating a file-like object with makefile() shouldn't
+Lib/test/test_tarfile.py:        # is_tarfile works on file-like objects
+Lib/test/test_tarfile.py:        # is_tarfile works on file-like objects
+Lib/test/test_urllib.py:    """urlopen(url [, data]) -> open file-like object"""
+Lib/test/test_zipfile/test_core.py:        # - passing a file-like object
+Lib/test/test_zipfile/test_core.py:        # - passing a file-like object
+Lib/traceback.py:    'file' should be an open file or file-like object with a write()
+Lib/unittest/runner.py:    """Used to decorate file-like objects with a handy 'writeln' method"""
+Lib/urllib/request.py:below).  It opens the URL and returns the results as file-like
+Lib/urllib/request.py:get a file-like object back.  One difference is that you can also pass
+Lib/urllib/response.py:The base class, addbase, defines a minimal file-like interface,
+Lib/wsgiref/handlers.py:        transmit the wrapped file-like object using a platform-specific
+Lib/wsgiref/util.py:    """Wrapper to convert file-like objects to iterables"""
+Lib/xml/dom/minidom.py:        """Write an XML element to a file-like object
+Lib/xml/etree/ElementTree.py:    file-like object) must be provided as input.
+Lib/xml/etree/ElementTree.py:        # file_or_filename is a file-like object
+Lib/xml/etree/ElementTree.py:    If *out* is provided, it must be a file or file-like object that receives
+Lib/xmlrpc/client.py:    """a file-like object to decode a response encoded with the gzip
+Lib/xmlrpc/client.py:# Return a decoded file-like object for the gzip encoding
+Lib/xmlrpc/client.py:# @return a file-like object that the decoded data can be read() from
+Lib/xml/sax/xmlreader.py:        must be a Python 2.0 Unicode-wrapped file-like that performs
+Lib/xml/sax/xmlreader.py:        """Set the byte stream (a Python file-like object which does
+Lib/zipapp.py:    The SOURCE can be the name of a directory, or a filename or a file-like
+Lib/zipapp.py:    which can be a filename or a file-like object.  If SOURCE is a directory,
+Lib/zipfile/__init__.py:        # Check if we were passed a file-like object
+Lib/zipfile/__init__.py:    file: Either the path to the file, or a file-like object.
+Lib/zipfile/__init__.py:        """Return file-like object for 'name'.
+Lib/zipfile/__init__.py:                    # Some file-like objects can provide tell() but not seek()
+Lib/zipfile/__init__.py:    The filename argument may be a file or file-like object too.
+Misc/HISTORY:  argument where file-like objects (ie StringIO and BytesIO) accept them to mean
+Misc/HISTORY:  (as opposed to a file-like object), this is equivalent:
+Misc/HISTORY:channels (which are like Python's file-like objects).  Jack Jansen has
+Misc/HISTORY:  direct output to an alternate file-like object.
+Misc/HISTORY:  file-like objects using a new ``fileobj`` constructor argument.  Patch by
+Misc/HISTORY:- Issue #11224: Fixed a regression in tarfile that affected the file-like
+Misc/HISTORY:- Issue #15204: Deprecated the 'U' mode in file-like objects.
+Misc/HISTORY:- Issue #4756: zipfile.is_zipfile() now supports file-like objects. Patch by
+Misc/HISTORY:- Issue #7322: Trying to read from a socket's file-like object after a timeout
+Misc/HISTORY:  method. As a result, all file-like objects which may be the target
+Misc/HISTORY:  other file-like objects.
+Misc/HISTORY:  parameter, as other file-like objects.  Patch by Ryan Kelly.
+Misc/HISTORY:- Support context management protocol for file-like objects returned by mailbox
+Misc/HISTORY:  the file-like object interface and with StringIO.  If operations are
+Misc/HISTORY:  ValueError when the file-like object is closed.  Patch by Alessandro Moura.
+Misc/NEWS:- bpo-25455: Fixed crashes in repr of recursive buffered file-like objects.
+Misc/NEWS:- bpo-25455: Fixed crashes in repr of recursive buffered file-like objects.
+Misc/NEWS:- bpo-25455: Fixed crashes in repr of recursive buffered file-like objects.
+Misc/NEWS:  even if the ZipFile was created by passing in a file-like object as the
+Misc/NEWS:  file-like objects.
+Misc/NEWS:  file-like objects, like :func:`zipfile.is_zipfile`. Patch by William
+Misc/NEWS:  ``read()`` methods of other file-like objects.
+Misc/NEWS:  ``read()`` methods of other file-like objects.
+Misc/NEWS:  unpickling from a file-like object that doesn't expose a readinto()
+Modules/clinic/pyexpat.c.h:"Parse XML data from file-like object.");
+Modules/_pickle.c:   Note that when reading from a file-like object, self->next_read_idx won't
+Modules/_pickle.c:        /* readinto() not supported on file-like object, fall back to read()
+Modules/pyexpat.c:Parse XML data from file-like object.
+Modules/_zoneinfo.c:/* Given a file-like object, this populates a ZoneInfo object
+Objects/fileobject.c: * file like object for sys.stderr.
+Objects/fileobject.c:/* Interfaces to write objects/strings to file-like objects */
+Python/bltinmodule.c:        a file-like object (stream); defaults to the current sys.stdout.
+Python/clinic/bltinmodule.c.h:"    a file-like object (stream); defaults to the current sys.stdout.\n"
+python-gdb.py:having the file-like object raise an exception if it gets too much data.
+python-gdb.py:of the data to a file-like object.  This allows us to stop the traversal by
+python-gdb.py:        process to "out", a file-like object.
+python-gdb.py:        to file-like object "out"
+python-gdb.py:    write a representation to file-like object "out"'''
+Tools/gdb/libpython.py:having the file-like object raise an exception if it gets too much data.
+Tools/gdb/libpython.py:of the data to a file-like object.  This allows us to stop the traversal by
+Tools/gdb/libpython.py:        process to "out", a file-like object.
+Tools/gdb/libpython.py:        to file-like object "out"
+Tools/gdb/libpython.py:    write a representation to file-like object "out"'''
